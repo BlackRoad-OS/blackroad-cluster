@@ -12,7 +12,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 6. **Refresh** your Google Sheet
 7. Look for the new **custom menu** in the menu bar
 
-## Templates (17 Total)
+## Templates (22 Total)
 
 ### Business Operations
 
@@ -49,7 +49,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Rep performance dashboards
 - Win/loss analysis, stalled deal alerts
 
-#### 💵 Budget Planning with Scenario Modeling ⭐ NEW
+#### 💵 Budget Planning with Scenario Modeling
 **Files:** `budget-planning.csv` + `budget-planning.gs`
 - Multiple budget scenarios (Best/Base/Worst case)
 - Revenue forecasting with growth models
@@ -58,6 +58,16 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Variance analysis (Actual vs Budget)
 - Department budgets, quarterly rollups
 - Startup runway calculator
+
+#### 💎 Cap Table & Investor Relations ⭐ NEW
+**Files:** `cap-table.csv` + `cap-table.gs`
+- Shareholder management
+- Equity grant tracking with vesting schedules
+- SAFE & convertible note tracking
+- Round modeling (Pre-seed to Series C)
+- Dilution calculator, waterfall analysis
+- Option pool management
+- Investor update emails
 
 ---
 
@@ -87,7 +97,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Automated follow-up sequences
 - Pipeline reporting, activity logging
 
-#### 📅 Meeting Scheduler with Calendar ⭐ NEW
+#### 📅 Meeting Scheduler with Calendar
 **Files:** `meeting-scheduler.csv` + `meeting-scheduler.gs`
 - Create calendar events directly from sheet
 - Recurring meeting templates
@@ -96,6 +106,26 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Meeting notes and action items
 - Meeting cost calculator
 - Analytics and reporting
+
+#### 🎯 OKR Tracker (Objectives & Key Results) ⭐ NEW
+**Files:** `okr-tracker.csv` + `okr-tracker.gs`
+- Company, Team, Individual OKRs
+- Key Results with measurable targets
+- Progress tracking and scoring (0.0 - 1.0)
+- Weekly check-ins
+- Quarterly reviews and archiving
+- Alignment visualization
+- Cascading objectives
+
+#### 👔 Applicant Tracking System (ATS) ⭐ NEW
+**Files:** `applicant-tracking.csv` + `applicant-tracking.gs`
+- Job requisition management
+- Candidate pipeline (Applied → Hired)
+- Interview scheduling with scorecards
+- Offer generation and tracking
+- Source analytics, time-to-hire metrics
+- Hiring funnel visualization
+- Automated candidate emails
 
 ---
 
@@ -125,7 +155,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Amendment management
 - Approval workflow, value tracking
 
-#### 🏢 Vendor Scoring & Management ⭐ NEW
+#### 🏢 Vendor Scoring & Management
 **Files:** `vendor-scoring.csv` + `vendor-scoring.gs`
 - Vendor evaluation scorecards
 - Weighted criteria scoring (7 criteria)
@@ -134,6 +164,26 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Risk assessment, compliance verification
 - Vendor comparison reports
 - Renewal alerts
+
+#### 💻 IT Asset Management ⭐ NEW
+**Files:** `it-asset-management.csv` + `it-asset-management.gs`
+- Hardware inventory (laptops, monitors, etc.)
+- Software license tracking
+- Assignment to employees (check-in/out)
+- Depreciation calculations
+- Warranty tracking and alerts
+- Maintenance scheduling
+- Full audit trail
+
+#### 🎫 Customer Support Ticketing ⭐ NEW
+**Files:** `support-ticketing.csv` + `support-ticketing.gs`
+- Ticket creation and tracking
+- Priority management (P1-P4) with SLAs
+- Agent assignment and performance
+- Customer communication templates
+- CSAT surveys and NPS tracking
+- SLA breach alerts
+- Category analysis and reporting
 
 ---
 
@@ -170,7 +220,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 
 ### Productivity & Organization
 
-#### 📁 Google Drive Organizer ⭐ NEW
+#### 📁 Google Drive Organizer
 **Files:** `drive-organizer.csv` + `drive-organizer.gs`
 - Scan entire Drive for all files
 - Auto-categorize by file type and keywords
@@ -182,16 +232,34 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 
 ---
 
-## Automation Triggers
+## Template Summary
 
-All templates support automatic scheduling:
+| # | Template | Menu | Key Features |
+|---|----------|------|--------------|
+| 1 | Invoice Generator | 📄 Invoice | Auto-numbering, PDF email |
+| 2 | Expense Tracker | 💰 Expenses | Approval workflow, mileage |
+| 3 | Financial Dashboard | 📊 Finance | KPIs, bank import |
+| 4 | Sales Pipeline | 💼 Sales | Forecasting, velocity |
+| 5 | Budget Planning | 💵 Budget | Scenarios, runway calc |
+| 6 | Cap Table | 💎 Cap Table | Equity, SAFEs, waterfall |
+| 7 | Time Tracking | ⏰ Time | Clock in/out, overtime |
+| 8 | HR Onboarding | 👥 HR | 17-task checklist |
+| 9 | CRM Automation | 🎯 CRM | Lead scoring, sequences |
+| 10 | Meeting Scheduler | 📅 Meetings | Calendar sync, templates |
+| 11 | OKR Tracker | 🎯 OKR Tools | Objectives, key results |
+| 12 | Applicant Tracking | 👥 Recruiting | Pipeline, interviews |
+| 13 | Project Management | 📈 Projects | Gantt, dependencies |
+| 14 | Inventory Management | 📦 Inventory | SKU lookup, PO generation |
+| 15 | Contract Management | 📝 Contracts | Lifecycle, renewals |
+| 16 | Vendor Scoring | 🏢 Vendors | Scorecards, RFP |
+| 17 | IT Asset Management | 💻 IT Assets | Hardware, software, depreciation |
+| 18 | Support Ticketing | 🎫 Support | SLAs, CSAT, agents |
+| 19 | HIPAA Compliance | 🏥 HIPAA | PHI logging, BAAs |
+| 20 | SOX Compliance | 📈 SOX | Control testing |
+| 21 | GDPR Compliance | 🇪🇺 GDPR | DSR tracking |
+| 22 | Drive Organizer | 📁 Drive | File organization |
 
-1. Go to **Extensions > Apps Script**
-2. Click the **clock icon** (Triggers)
-3. Click **+ Add Trigger**
-4. Select function (e.g., `refreshAllData`, `dailyLowStockCheck`, `checkComplianceAlerts`)
-5. Choose time-based trigger
-6. Set frequency (daily/weekly)
+---
 
 ## BlackRoad Folder Structure
 
@@ -276,30 +344,6 @@ const CONFIG = {
 **Calendar events not syncing?**
 - Ensure calendar permissions granted
 - Check timezone settings in CONFIG
-
----
-
-## Template Summary
-
-| # | Template | Menu | Key Features |
-|---|----------|------|--------------|
-| 1 | Invoice Generator | 📄 Invoice | Auto-numbering, PDF email |
-| 2 | Expense Tracker | 💰 Expenses | Approval workflow, mileage |
-| 3 | Financial Dashboard | 📊 Finance | KPIs, bank import |
-| 4 | Sales Pipeline | 💼 Sales | Forecasting, velocity |
-| 5 | Budget Planning | 💵 Budget | Scenarios, runway calc |
-| 6 | Time Tracking | ⏰ Time | Clock in/out, overtime |
-| 7 | HR Onboarding | 👥 HR | 17-task checklist |
-| 8 | CRM Automation | 🎯 CRM | Lead scoring, sequences |
-| 9 | Meeting Scheduler | 📅 Meetings | Calendar sync, templates |
-| 10 | Project Management | 📈 Projects | Gantt, dependencies |
-| 11 | Inventory Management | 📦 Inventory | SKU lookup, PO generation |
-| 12 | Contract Management | 📝 Contracts | Lifecycle, renewals |
-| 13 | Vendor Scoring | 🏢 Vendors | Scorecards, RFP |
-| 14 | HIPAA Compliance | 🏥 HIPAA | PHI logging, BAAs |
-| 15 | SOX Compliance | 📈 SOX | Control testing |
-| 16 | GDPR Compliance | 🇪🇺 GDPR | DSR tracking |
-| 17 | Drive Organizer | 📁 Drive | File organization |
 
 ---
 

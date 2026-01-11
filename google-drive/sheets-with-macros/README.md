@@ -12,7 +12,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 6. **Refresh** your Google Sheet
 7. Look for the new **custom menu** in the menu bar
 
-## Templates (13 Total)
+## Templates (17 Total)
 
 ### Business Operations
 
@@ -49,6 +49,16 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Rep performance dashboards
 - Win/loss analysis, stalled deal alerts
 
+#### 💵 Budget Planning with Scenario Modeling ⭐ NEW
+**Files:** `budget-planning.csv` + `budget-planning.gs`
+- Multiple budget scenarios (Best/Base/Worst case)
+- Revenue forecasting with growth models
+- Cash flow projections (12-month)
+- Break-even analysis
+- Variance analysis (Actual vs Budget)
+- Department budgets, quarterly rollups
+- Startup runway calculator
+
 ---
 
 ### HR & People
@@ -77,6 +87,16 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Automated follow-up sequences
 - Pipeline reporting, activity logging
 
+#### 📅 Meeting Scheduler with Calendar ⭐ NEW
+**Files:** `meeting-scheduler.csv` + `meeting-scheduler.gs`
+- Create calendar events directly from sheet
+- Recurring meeting templates
+- Attendee management, availability checking
+- Meeting templates (1:1, Standup, Sprint, Board)
+- Meeting notes and action items
+- Meeting cost calculator
+- Analytics and reporting
+
 ---
 
 ### Project & Inventory
@@ -104,6 +124,16 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - E-signature status monitoring
 - Amendment management
 - Approval workflow, value tracking
+
+#### 🏢 Vendor Scoring & Management ⭐ NEW
+**Files:** `vendor-scoring.csv` + `vendor-scoring.gs`
+- Vendor evaluation scorecards
+- Weighted criteria scoring (7 criteria)
+- RFP/RFI generation
+- Performance monitoring, SLA tracking
+- Risk assessment, compliance verification
+- Vendor comparison reports
+- Renewal alerts
 
 ---
 
@@ -138,6 +168,20 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 
 ---
 
+### Productivity & Organization
+
+#### 📁 Google Drive Organizer ⭐ NEW
+**Files:** `drive-organizer.csv` + `drive-organizer.gs`
+- Scan entire Drive for all files
+- Auto-categorize by file type and keywords
+- Duplicate file detection
+- Create BlackRoad folder structure (29 folders)
+- Batch move files to organized folders
+- Archive old files (1+ year)
+- Storage analytics and reporting
+
+---
+
 ## Automation Triggers
 
 All templates support automatic scheduling:
@@ -148,6 +192,53 @@ All templates support automatic scheduling:
 4. Select function (e.g., `refreshAllData`, `dailyLowStockCheck`, `checkComplianceAlerts`)
 5. Choose time-based trigger
 6. Set frequency (daily/weekly)
+
+## BlackRoad Folder Structure
+
+The Drive Organizer creates this structure:
+
+```
+BlackRoad OS/
+├── Corporate/
+│   ├── Formation
+│   ├── Legal
+│   ├── Tax
+│   └── Compliance
+├── Finance/
+│   ├── Invoices
+│   ├── Expenses
+│   └── Reports
+├── HR/
+│   ├── Recruiting
+│   ├── Onboarding
+│   └── Policies
+├── Engineering/
+│   ├── Architecture
+│   ├── Documentation
+│   └── Specs
+├── Marketing/
+│   ├── Pitch Decks
+│   ├── Whitepapers
+│   └── Brand
+├── Sales/
+│   ├── Proposals
+│   ├── Contracts
+│   └── Pipeline
+├── Products/
+│   ├── Prism Console
+│   ├── Agent Swarm
+│   └── Documentation
+├── Templates/
+│   ├── Sheets
+│   ├── Docs
+│   └── Slides
+├── Archive/
+│   ├── 2024
+│   └── 2023
+└── Personal/
+    ├── Resumes
+    └── Notes
+```
 
 ## Security Notes
 
@@ -162,8 +253,8 @@ Edit CONFIG sections in each script:
 
 ```javascript
 const CONFIG = {
+  COMPANY_NAME: 'BlackRoad OS, Inc.',
   SENDER_NAME: 'Your Name',
-  COMPANY_NAME: 'Your Company',
   // ... other settings
 };
 ```
@@ -181,6 +272,34 @@ const CONFIG = {
 **Email not sending?**
 - Check daily Gmail sending limits (500/day)
 - Verify recipient email addresses
+
+**Calendar events not syncing?**
+- Ensure calendar permissions granted
+- Check timezone settings in CONFIG
+
+---
+
+## Template Summary
+
+| # | Template | Menu | Key Features |
+|---|----------|------|--------------|
+| 1 | Invoice Generator | 📄 Invoice | Auto-numbering, PDF email |
+| 2 | Expense Tracker | 💰 Expenses | Approval workflow, mileage |
+| 3 | Financial Dashboard | 📊 Finance | KPIs, bank import |
+| 4 | Sales Pipeline | 💼 Sales | Forecasting, velocity |
+| 5 | Budget Planning | 💵 Budget | Scenarios, runway calc |
+| 6 | Time Tracking | ⏰ Time | Clock in/out, overtime |
+| 7 | HR Onboarding | 👥 HR | 17-task checklist |
+| 8 | CRM Automation | 🎯 CRM | Lead scoring, sequences |
+| 9 | Meeting Scheduler | 📅 Meetings | Calendar sync, templates |
+| 10 | Project Management | 📈 Projects | Gantt, dependencies |
+| 11 | Inventory Management | 📦 Inventory | SKU lookup, PO generation |
+| 12 | Contract Management | 📝 Contracts | Lifecycle, renewals |
+| 13 | Vendor Scoring | 🏢 Vendors | Scorecards, RFP |
+| 14 | HIPAA Compliance | 🏥 HIPAA | PHI logging, BAAs |
+| 15 | SOX Compliance | 📈 SOX | Control testing |
+| 16 | GDPR Compliance | 🇪🇺 GDPR | DSR tracking |
+| 17 | Drive Organizer | 📁 Drive | File organization |
 
 ---
 

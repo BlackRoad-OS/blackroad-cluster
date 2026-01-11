@@ -1,0 +1,67 @@
+#!/bin/bash
+# BlackRoad Cluster - View your entire Pi mesh
+# No cloud. Just your network.
+
+AMBER='\033[38;5;214m'
+PINK='\033[38;5;198m'
+BLUE='\033[38;5;33m'
+GREEN='\033[38;5;82m'
+RED='\033[38;5;196m'
+GRAY='\033[38;5;245m'
+RESET='\033[0m'
+
+# Known Pis
+declare -A NODES=(
+  ["lucidia"]="192.168.4.38"
+  ["blackroad-pi"]="192.168.4.64"
+  ["alice"]="192.168.4.49"
+  ["aria"]="192.168.4.99"
+)
+
+echo -e "${PINK}┌─────────────────────────────────────────────────────────────┐${RESET}"
+echo -e "${PINK}│${RESET}          ${AMBER}🖤 BLACKROAD CLUSTER${RESET}                              ${PINK}│${RESET}"
+echo -e "${PINK}│${RESET}          ${GRAY}Pure LAN Mesh • No Cloud${RESET}                          ${PINK}│${RESET}"
+echo -e "${PINK}└─────────────────────────────────────────────────────────────┘${RESET}"
+echo ""
+
+echo -e "${BLUE}NODES${RESET}"
+echo -e "${GRAY}─────────────────────────────────────────${RESET}"
+
+for name in "${!NODES[@]}"; do
+  ip="${NODES[$name]}"
+  # Check SSH
+  if nc -z -w 1 "$ip" 22 2>/dev/null; then
+    status="${GREEN}● ONLINE${RESET}"
+    # Try to get services count
+    services=$(ssh -o ConnectTimeout=2 -o StrictHostKeyChecking=no -i ~/.ssh/br_mesh_ed25519 pi@$ip "ls /var/www/blackroad 2>/dev/null | wc -l" 2>/dev/null || echo "?")
+  else
+    status="${RED}○ OFFLINE${RESET}"
+    services="-"
+  fi
+  printf "  %-15s %-16s %b  services: %s\n" "$name" "$ip" "$status" "$services"
+done
+
+echo ""
+echo -e "${BLUE}ACCESS${RESET}"
+echo -e "${GRAY}─────────────────────────────────────────${RESET}"
+echo -e "  HTTP:   ${GREEN}http://lucidia.local/${RESET}"
+echo -e "  HTTPS:  ${GREEN}https://192.168.4.38/${RESET}"
+echo -e "  SSH:    ${GRAY}ssh pi@lucidia.local${RESET}"
+
+echo ""
+echo -e "${BLUE}SERVICES${RESET}"
+echo -e "${GRAY}─────────────────────────────────────────${RESET}"
+
+# Get service count from primary node
+if nc -z -w 1 192.168.4.38 22 2>/dev/null; then
+  count=$(ssh -o ConnectTimeout=2 -i ~/.ssh/br_mesh_ed25519 pi@192.168.4.38 "ls /var/www/blackroad 2>/dev/null | wc -l" 2>/dev/null || echo "?")
+  echo -e "  Total: ${AMBER}$count${RESET} services on lucidia"
+  echo -e "  Dashboard: ${GREEN}http://192.168.4.38/${RESET}"
+  echo ""
+  echo -e "  ${GRAY}Sample services:${RESET}"
+  ssh -o ConnectTimeout=2 -i ~/.ssh/br_mesh_ed25519 pi@192.168.4.38 "ls /var/www/blackroad 2>/dev/null | head -10 | sed 's/^/    ⚡ /'" 2>/dev/null
+fi
+
+echo ""
+echo -e "${GRAY}─────────────────────────────────────────${RESET}"
+echo -e "${GRAY}Run 'blackroad-cluster' anytime to check status${RESET}"

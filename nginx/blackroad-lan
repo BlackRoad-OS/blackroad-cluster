@@ -1,0 +1,22 @@
+# BlackRoad LAN Mesh - Direct Access
+server {
+    listen 80;
+    server_name lucidia.local 192.168.4.38 localhost;
+    
+    root /var/www/blackroad/empire;
+    index index.html;
+    
+    location ~ ^/([a-zA-Z0-9_-]+)/?$ {
+        alias /var/www/blackroad/$1/;
+        index index.html;
+    }
+    
+    location /api/ {
+        proxy_pass http://127.0.0.1:8888/;
+    }
+    
+    location /health {
+        return 200 '{"status":"ok","host":"lucidia","services":300}';
+        add_header Content-Type application/json;
+    }
+}

@@ -12,137 +12,129 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 6. **Refresh** your Google Sheet
 7. Look for the new **custom menu** in the menu bar
 
-## Templates (8 Total)
+## Templates (13 Total)
 
-### 📄 Invoice Generator
+### Business Operations
+
+#### 📄 Invoice Generator
 **Files:** `invoice-generator.csv` + `invoice-generator.gs`
-
-**Features:**
 - Auto-increment invoice numbers
 - Calculate due dates from payment terms
 - Send invoices via Gmail as PDF
 - Track invoice status (Draft/Sent/Paid/Overdue)
-- Generate monthly reports
-- Overdue invoice alerts
+- Generate monthly reports, overdue alerts
 
-**Menu:** `📄 Invoice Tools`
-
----
-
-### 💰 Expense Tracker
+#### 💰 Expense Tracker
 **Files:** `expense-tracker.csv` + `expense-tracker.gs`
-
-**Features:**
 - Quick add expense dialog
 - Attach receipts from Google Drive
 - Approval workflow (Approve/Reject)
-- Budget vs actual tracking
 - Mileage calculator (IRS rate $0.67/mi)
 - Per diem calculator (GSA rates)
 - Export for QuickBooks/Xero
 
-**Menu:** `💰 Expense Tools`
+#### 📊 Financial Dashboard
+**Files:** `financial-dashboard.csv` + `financial-dashboard.gs`
+- KPI cards with trend analysis
+- Import bank CSV statements
+- Cash flow forecasting, AR aging
+- Budget vs actual tracking
+- Auto-refresh triggers (daily/weekly)
+
+#### 💼 Sales Pipeline
+**Files:** `sales-pipeline.csv` + `sales-pipeline.gs`
+- Visual pipeline stages with probability weighting
+- Revenue forecasting (weighted/unweighted)
+- Sales velocity metrics
+- Rep performance dashboards
+- Win/loss analysis, stalled deal alerts
 
 ---
 
-### 🎯 CRM with Email Automation
-**Files:** `crm-automation.csv` + `crm-automation.gs`
+### HR & People
 
-**Features:**
+#### ⏰ Time Tracking with Payroll
+**Files:** `time-tracking.csv` + `time-tracking.gs`
+- Clock in/out with timestamps
+- Break time tracking
+- Overtime calculations (40hr weekly, 8hr daily)
+- Double-time support (12+ hrs/day)
+- PTO/sick time requests
+- Payroll export
+
+#### 👥 HR Onboarding Workflow
+**Files:** `hr-onboarding.csv` + `hr-onboarding.gs`
+- 17-task checklist automation
+- Individual checklist sheets per employee
+- Welcome email sequences
+- 30/60/90 day review reminders
+- Manager notifications
+
+#### 🎯 CRM with Email Automation
+**Files:** `crm-automation.csv` + `crm-automation.gs`
 - Contact management with lead scoring
 - Email templates with merge fields
 - Automated follow-up sequences
-- Gmail integration for sending
-- Pipeline reporting
-- Activity logging
-- Follow-up reminders
-
-**Menu:** `🎯 CRM Tools`
+- Pipeline reporting, activity logging
 
 ---
 
-### 📊 Financial Dashboard
-**Files:** `financial-dashboard.csv` + `financial-dashboard.gs`
+### Project & Inventory
 
-**Features:**
-- KPI cards with trend analysis
-- Import bank CSV statements
-- Manual transaction entry
-- Cash flow forecasting
-- AR aging analysis
-- Budget vs actual tracking
-- Automated email reports
-- Auto-refresh triggers (daily/weekly)
-
-**Menu:** `📊 Dashboard Tools`
-
----
-
-### 📈 Project Management with Gantt
+#### 📈 Project Management with Gantt
 **Files:** `project-management.csv` + `project-management.gs`
-
-**Features:**
 - Visual Gantt chart auto-generation
 - Task dependency tracking
-- Resource allocation by assignee
-- Milestone highlighting
-- Progress tracking with burndown data
-- Today line indicator
-- Status updates via email
+- Resource allocation, milestone alerts
+- Progress tracking, status emails
 - PDF export
 
-**Menu:** `📊 Project Tools`
-
----
-
-### 📦 Inventory Management
+#### 📦 Inventory Management
 **Files:** `inventory-management.csv` + `inventory-management.gs`
-
-**Features:**
 - SKU/Barcode lookup
-- Stock in/out recording with history
-- Automatic low stock alerts
-- Reorder point tracking
+- Stock in/out with history
+- Low stock alerts, reorder points
 - Purchase order generation
-- Inventory valuation
-- ABC analysis for optimization
-- Daily email alerts
+- ABC analysis, inventory valuation
 
-**Menu:** `📦 Inventory Tools`
-
----
-
-### ⏰ Time Tracking with Payroll
-**Files:** `time-tracking.csv` + `time-tracking.gs`
-
-**Features:**
-- Clock in/out with timestamps
-- Break time tracking
-- Overtime calculations (weekly 40hrs, daily 8hrs)
-- Double-time support (12+ hrs/day)
-- Employee hourly rates
-- PTO/sick time requests
-- Manager approval workflow
-- Payroll export
-
-**Menu:** `⏰ Time Tools`
+#### 📝 Contract Management
+**Files:** `contract-management.csv` + `contract-management.gs`
+- Contract lifecycle tracking
+- Renewal/expiration alerts (60-day notice)
+- E-signature status monitoring
+- Amendment management
+- Approval workflow, value tracking
 
 ---
 
-### 👥 HR Onboarding Workflow
-**Files:** `hr-onboarding.csv` + `hr-onboarding.gs`
+### Compliance
 
-**Features:**
-- New hire checklist automation (17 tasks)
-- Individual checklist sheets per employee
-- Welcome email sequences
-- First day info automation
-- 30/60/90 day review reminders
-- Manager notifications
-- Progress tracking
-- Compliance training tracking
+#### 🏥 HIPAA Compliance
+**Files:** `hipaa-compliance.csv` + `hipaa-compliance.gs`
+- PHI access logging (Article 15)
+- Business Associate Agreement tracking
+- Security incident management
+- Breach notification workflow (72-hour)
+- Training compliance monitoring
+- Annual audit checklists
 
-**Menu:** `👥 HR Onboarding`
+#### 📈 SOX Compliance
+**Files:** `sox-compliance.csv` + `sox-compliance.gs`
+- Control testing automation
+- Deficiency management (SD/MW tracking)
+- Evidence collection
+- Segregation of duties matrix
+- Management certification workflow
+- Quarter/year-end close checklists
+
+#### 🇪🇺 GDPR Compliance
+**Files:** `gdpr-compliance.csv` + `gdpr-compliance.gs`
+- Data Subject Request (DSR) tracking
+- Processing activities register (Article 30)
+- Data breach notification (72-hour DPA, individual)
+- Consent management
+- DPIA templates
+- Cross-border transfer tracking
 
 ---
 
@@ -153,7 +145,7 @@ All templates support automatic scheduling:
 1. Go to **Extensions > Apps Script**
 2. Click the **clock icon** (Triggers)
 3. Click **+ Add Trigger**
-4. Select function (e.g., `refreshAllData`, `dailyLowStockCheck`)
+4. Select function (e.g., `refreshAllData`, `dailyLowStockCheck`, `checkComplianceAlerts`)
 5. Choose time-based trigger
 6. Set frequency (daily/weekly)
 
@@ -166,7 +158,7 @@ All templates support automatic scheduling:
 
 ## Customization
 
-Edit these sections in the scripts:
+Edit CONFIG sections in each script:
 
 ```javascript
 const CONFIG = {
@@ -189,10 +181,6 @@ const CONFIG = {
 **Email not sending?**
 - Check daily Gmail sending limits (500/day)
 - Verify recipient email addresses
-
-**Formulas showing #REF?**
-- Ensure you haven't deleted referenced cells
-- Check row numbers in formulas match your data
 
 ---
 

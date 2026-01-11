@@ -12,7 +12,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 6. **Refresh** your Google Sheet
 7. Look for the new **custom menu** in the menu bar
 
-## Templates (22 Total)
+## Templates (27 Total)
 
 ### Business Operations
 
@@ -59,7 +59,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Department budgets, quarterly rollups
 - Startup runway calculator
 
-#### 💎 Cap Table & Investor Relations ⭐ NEW
+#### 💎 Cap Table & Investor Relations
 **Files:** `cap-table.csv` + `cap-table.gs`
 - Shareholder management
 - Equity grant tracking with vesting schedules
@@ -68,6 +68,16 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Dilution calculator, waterfall analysis
 - Option pool management
 - Investor update emails
+
+#### 📈 SaaS Metrics Dashboard ⭐ NEW
+**Files:** `saas-metrics.csv` + `saas-metrics.gs`
+- MRR/ARR tracking and forecasting
+- Churn analysis by reason and cohort
+- Customer LTV calculation
+- CAC and LTV:CAC ratio
+- Subscription management
+- Trial expiration alerts
+- Executive dashboard
 
 ---
 
@@ -117,7 +127,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Alignment visualization
 - Cascading objectives
 
-#### 👔 Applicant Tracking System (ATS) ⭐ NEW
+#### 👔 Applicant Tracking System (ATS)
 **Files:** `applicant-tracking.csv` + `applicant-tracking.gs`
 - Job requisition management
 - Candidate pipeline (Applied → Hired)
@@ -126,6 +136,16 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Source analytics, time-to-hire metrics
 - Hiring funnel visualization
 - Automated candidate emails
+
+#### 📊 Employee Performance Reviews ⭐ NEW
+**Files:** `performance-reviews.csv` + `performance-reviews.gs`
+- Annual/quarterly performance reviews
+- 360-degree feedback (self, manager, peer)
+- Competency ratings (10 competencies)
+- Goal tracking with OKR alignment
+- Calibration grid and distribution
+- Performance improvement plans (PIP)
+- Review document generation
 
 ---
 
@@ -175,7 +195,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Maintenance scheduling
 - Full audit trail
 
-#### 🎫 Customer Support Ticketing ⭐ NEW
+#### 🎫 Customer Support Ticketing
 **Files:** `support-ticketing.csv` + `support-ticketing.gs`
 - Ticket creation and tracking
 - Priority management (P1-P4) with SLAs
@@ -184,6 +204,41 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - CSAT surveys and NPS tracking
 - SLA breach alerts
 - Category analysis and reporting
+
+#### 🗺️ Product Roadmap & Sprint Planning ⭐ NEW
+**Files:** `product-roadmap.csv` + `product-roadmap.gs`
+- Product roadmap with quarterly planning
+- RICE scoring for prioritization
+- Sprint management and velocity tracking
+- Burndown charts
+- Release notes generation
+- Capacity planning
+- Feature pipeline (Backlog → Done)
+
+#### ⚠️ Risk Register & Mitigation ⭐ NEW
+**Files:** `risk-register.csv` + `risk-register.gs`
+- Risk identification (11 categories)
+- Probability × Impact scoring (5×5 matrix)
+- Risk ratings (Critical/High/Medium/Low)
+- Mitigation action tracking
+- Executive summary reports
+- Trend analysis
+- Overdue action alerts
+
+---
+
+### Marketing
+
+#### 📅 Content Calendar & Social Media ⭐ NEW
+**Files:** `content-calendar.csv` + `content-calendar.gs`
+- Content planning across 8 platforms
+- Campaign management
+- Approval workflow (Idea → Published)
+- Weekly/monthly calendar views
+- Pipeline view (Kanban-style)
+- Content ideas generator
+- Optimal posting times
+- Hashtag suggestions
 
 ---
 
@@ -258,6 +313,11 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 | 20 | SOX Compliance | 📈 SOX | Control testing |
 | 21 | GDPR Compliance | 🇪🇺 GDPR | DSR tracking |
 | 22 | Drive Organizer | 📁 Drive | File organization |
+| 23 | SaaS Metrics | 📈 SaaS Metrics | MRR, churn, LTV |
+| 24 | Performance Reviews | 📊 Performance | 360 feedback, goals |
+| 25 | Product Roadmap | 🗺️ Roadmap | RICE scoring, sprints |
+| 26 | Risk Register | ⚠️ Risk Register | Risk matrix, mitigation |
+| 27 | Content Calendar | 📅 Content | Multi-platform, campaigns |
 
 ---
 

@@ -12,7 +12,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 6. **Refresh** your Google Sheet
 7. Look for the new **custom menu** in the menu bar
 
-## Templates
+## Templates (8 Total)
 
 ### 📄 Invoice Generator
 **Files:** `invoice-generator.csv` + `invoice-generator.gs`
@@ -37,7 +37,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Attach receipts from Google Drive
 - Approval workflow (Approve/Reject)
 - Budget vs actual tracking
-- Mileage calculator (IRS rate)
+- Mileage calculator (IRS rate $0.67/mi)
 - Per diem calculator (GSA rates)
 - Export for QuickBooks/Xero
 
@@ -76,14 +76,84 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 
 **Menu:** `📊 Dashboard Tools`
 
+---
+
+### 📈 Project Management with Gantt
+**Files:** `project-management.csv` + `project-management.gs`
+
+**Features:**
+- Visual Gantt chart auto-generation
+- Task dependency tracking
+- Resource allocation by assignee
+- Milestone highlighting
+- Progress tracking with burndown data
+- Today line indicator
+- Status updates via email
+- PDF export
+
+**Menu:** `📊 Project Tools`
+
+---
+
+### 📦 Inventory Management
+**Files:** `inventory-management.csv` + `inventory-management.gs`
+
+**Features:**
+- SKU/Barcode lookup
+- Stock in/out recording with history
+- Automatic low stock alerts
+- Reorder point tracking
+- Purchase order generation
+- Inventory valuation
+- ABC analysis for optimization
+- Daily email alerts
+
+**Menu:** `📦 Inventory Tools`
+
+---
+
+### ⏰ Time Tracking with Payroll
+**Files:** `time-tracking.csv` + `time-tracking.gs`
+
+**Features:**
+- Clock in/out with timestamps
+- Break time tracking
+- Overtime calculations (weekly 40hrs, daily 8hrs)
+- Double-time support (12+ hrs/day)
+- Employee hourly rates
+- PTO/sick time requests
+- Manager approval workflow
+- Payroll export
+
+**Menu:** `⏰ Time Tools`
+
+---
+
+### 👥 HR Onboarding Workflow
+**Files:** `hr-onboarding.csv` + `hr-onboarding.gs`
+
+**Features:**
+- New hire checklist automation (17 tasks)
+- Individual checklist sheets per employee
+- Welcome email sequences
+- First day info automation
+- 30/60/90 day review reminders
+- Manager notifications
+- Progress tracking
+- Compliance training tracking
+
+**Menu:** `👥 HR Onboarding`
+
+---
+
 ## Automation Triggers
 
-Some templates support automatic scheduling:
+All templates support automatic scheduling:
 
 1. Go to **Extensions > Apps Script**
 2. Click the **clock icon** (Triggers)
 3. Click **+ Add Trigger**
-4. Select function (e.g., `refreshAllData`)
+4. Select function (e.g., `refreshAllData`, `dailyLowStockCheck`)
 5. Choose time-based trigger
 6. Set frequency (daily/weekly)
 
@@ -119,6 +189,10 @@ const CONFIG = {
 **Email not sending?**
 - Check daily Gmail sending limits (500/day)
 - Verify recipient email addresses
+
+**Formulas showing #REF?**
+- Ensure you haven't deleted referenced cells
+- Check row numbers in formulas match your data
 
 ---
 

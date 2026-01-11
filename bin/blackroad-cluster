@@ -10,13 +10,9 @@ RED='\033[38;5;196m'
 GRAY='\033[38;5;245m'
 RESET='\033[0m'
 
-# Known Pis
-declare -A NODES=(
-  ["lucidia"]="192.168.4.38"
-  ["blackroad-pi"]="192.168.4.64"
-  ["alice"]="192.168.4.49"
-  ["aria"]="192.168.4.99"
-)
+# Known Pis (zsh-compatible arrays)
+NODE_NAMES=("lucidia" "blackroad-pi" "alice" "aria")
+NODE_IPS=("192.168.4.38" "192.168.4.64" "192.168.4.49" "192.168.4.99")
 
 echo -e "${PINK}┌─────────────────────────────────────────────────────────────┐${RESET}"
 echo -e "${PINK}│${RESET}          ${AMBER}🖤 BLACKROAD CLUSTER${RESET}                              ${PINK}│${RESET}"
@@ -27,8 +23,9 @@ echo ""
 echo -e "${BLUE}NODES${RESET}"
 echo -e "${GRAY}─────────────────────────────────────────${RESET}"
 
-for name in "${!NODES[@]}"; do
-  ip="${NODES[$name]}"
+for i in {0..3}; do
+  name="${NODE_NAMES[$i]}"
+  ip="${NODE_IPS[$i]}"
   # Check SSH
   if nc -z -w 1 "$ip" 22 2>/dev/null; then
     status="${GREEN}● ONLINE${RESET}"

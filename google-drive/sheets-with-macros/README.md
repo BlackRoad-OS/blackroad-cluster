@@ -12,7 +12,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 6. **Refresh** your Google Sheet
 7. Look for the new **custom menu** in the menu bar
 
-## Templates (27 Total)
+## Templates (32 Total)
 
 ### Business Operations
 
@@ -69,7 +69,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Option pool management
 - Investor update emails
 
-#### 📈 SaaS Metrics Dashboard ⭐ NEW
+#### 📈 SaaS Metrics Dashboard
 **Files:** `saas-metrics.csv` + `saas-metrics.gs`
 - MRR/ARR tracking and forecasting
 - Churn analysis by reason and cohort
@@ -117,7 +117,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Meeting cost calculator
 - Analytics and reporting
 
-#### 🎯 OKR Tracker (Objectives & Key Results) ⭐ NEW
+#### 🎯 OKR Tracker (Objectives & Key Results)
 **Files:** `okr-tracker.csv` + `okr-tracker.gs`
 - Company, Team, Individual OKRs
 - Key Results with measurable targets
@@ -137,7 +137,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Hiring funnel visualization
 - Automated candidate emails
 
-#### 📊 Employee Performance Reviews ⭐ NEW
+#### 📊 Employee Performance Reviews
 **Files:** `performance-reviews.csv` + `performance-reviews.gs`
 - Annual/quarterly performance reviews
 - 360-degree feedback (self, manager, peer)
@@ -146,6 +146,26 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Calibration grid and distribution
 - Performance improvement plans (PIP)
 - Review document generation
+
+#### 👥 Employee Directory & Org Chart ⭐ NEW
+**Files:** `employee-directory.csv` + `employee-directory.gs`
+- Complete employee directory management
+- Org chart visualization by department
+- Skills matrix and expertise tracking
+- Birthday and anniversary alerts
+- Department and location reports
+- Quick search and filter
+- Manager hierarchy tracking
+
+#### 📚 Training & Certification Tracker ⭐ NEW
+**Files:** `training-tracker.csv` + `training-tracker.gs`
+- Training course catalog management
+- Employee training assignments
+- Certification tracking with expiry alerts
+- Compliance training management
+- Learning path creation
+- Training completion reports
+- Automatic renewal reminders
 
 ---
 
@@ -185,7 +205,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Vendor comparison reports
 - Renewal alerts
 
-#### 💻 IT Asset Management ⭐ NEW
+#### 💻 IT Asset Management
 **Files:** `it-asset-management.csv` + `it-asset-management.gs`
 - Hardware inventory (laptops, monitors, etc.)
 - Software license tracking
@@ -205,7 +225,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - SLA breach alerts
 - Category analysis and reporting
 
-#### 🗺️ Product Roadmap & Sprint Planning ⭐ NEW
+#### 🗺️ Product Roadmap & Sprint Planning
 **Files:** `product-roadmap.csv` + `product-roadmap.gs`
 - Product roadmap with quarterly planning
 - RICE scoring for prioritization
@@ -215,7 +235,7 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Capacity planning
 - Feature pipeline (Backlog → Done)
 
-#### ⚠️ Risk Register & Mitigation ⭐ NEW
+#### ⚠️ Risk Register & Mitigation
 **Files:** `risk-register.csv` + `risk-register.gs`
 - Risk identification (11 categories)
 - Probability × Impact scoring (5×5 matrix)
@@ -225,11 +245,45 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 - Trend analysis
 - Overdue action alerts
 
+#### 📅 Event Planning & Management ⭐ NEW
+**Files:** `event-planning.csv` + `event-planning.gs`
+- Event creation and lifecycle management
+- Attendee registration and check-in
+- Budget tracking per event
+- Task checklists with templates
+- Email communication to attendees
+- Venue and capacity management
+- ROI analysis and reporting
+
+---
+
+### Sales & Marketing
+
+#### 🔍 Competitive Intelligence Tracker ⭐ NEW
+**Files:** `competitive-intelligence.csv` + `competitive-intelligence.gs`
+- Competitor profiles with SWOT analysis
+- Product/feature comparison matrix
+- Pricing intelligence tracking
+- Win/loss analysis
+- Battle cards for sales
+- Market position mapping
+- Weekly intel digest emails
+
+#### 💬 Customer Feedback & NPS ⭐ NEW
+**Files:** `customer-feedback.csv` + `customer-feedback.gs`
+- NPS (Net Promoter Score) surveys
+- CSAT (Customer Satisfaction) tracking
+- CES (Customer Effort Score)
+- Feedback categorization and tagging
+- Sentiment analysis
+- Response management workflow
+- Trend analysis and reporting
+
 ---
 
 ### Marketing
 
-#### 📅 Content Calendar & Social Media ⭐ NEW
+#### 📅 Content Calendar & Social Media
 **Files:** `content-calendar.csv` + `content-calendar.gs`
 - Content planning across 8 platforms
 - Campaign management
@@ -318,6 +372,11 @@ Enterprise-grade spreadsheet templates with Google Apps Script automation.
 | 25 | Product Roadmap | 🗺️ Roadmap | RICE scoring, sprints |
 | 26 | Risk Register | ⚠️ Risk Register | Risk matrix, mitigation |
 | 27 | Content Calendar | 📅 Content | Multi-platform, campaigns |
+| 28 | Employee Directory | 👥 Directory | Org chart, skills matrix |
+| 29 | Training Tracker | 📚 Training | Certifications, compliance |
+| 30 | Event Planning | 📅 Events | Attendees, budget, tasks |
+| 31 | Competitive Intel | 🔍 Intel | SWOT, battle cards, win/loss |
+| 32 | Customer Feedback | 💬 Feedback | NPS, CSAT, sentiment |
 
 ---
 
